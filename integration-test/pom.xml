@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>fr.netapsys</groupId>
+		<artifactId>sample-parent</artifactId>
+		<version>2.0.4</version>
+		<relativePath>../parent/pom.xml</relativePath>
+	</parent>
+	<groupId>fr.netapsys.devoxx</groupId>
+	<artifactId>integration-test</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.0</version>
+	<name>integration-test</name>
+	<properties>
+
+		<slf4j-version>1.7.6</slf4j-version>
+		<log4j-version>1.2.17</log4j-version>
+		<pax-exam-version>3.4.0</pax-exam-version>
+		<pax-url-version>1.6.0</pax-url-version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>fr.netapsys.devoxx</groupId>
+			<artifactId>helloService</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>fr.netapsys.devoxx</groupId> -->
+		<!-- <artifactId>helloConsumer</artifactId> -->
+		<!-- <version>1.0.0</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>fr.netapsys.devoxx</groupId>
+			<artifactId>provision</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>fr.netapsys.devoxx</groupId>
+			<artifactId>repository-ldap</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>fr.netapsys.devoxx</groupId>
+			<artifactId>repository-mongo</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.osgi</groupId> -->
+		<!-- <artifactId>org.osgi.enterprise</artifactId> -->
+		<!-- <version>4.2.0</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ops4j.pax.exam</groupId>
+			<artifactId>pax-exam-container-karaf</artifactId>
+			<version>${pax-exam-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ops4j.pax.exam</groupId>
+			<artifactId>pax-exam-junit4</artifactId>
+			<version>${pax-exam-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ops4j.pax.exam</groupId>
+			<artifactId>pax-exam</artifactId>
+			<version>${pax-exam-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ops4j.pax.exam</groupId>
+			<artifactId>pax-exam-link-mvn</artifactId>
+			<version>${pax-exam-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ops4j.pax.url</groupId>
+			<artifactId>pax-url-aether</artifactId>
+			<version>${pax-url-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+</project>

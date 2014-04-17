@@ -1,0 +1,5 @@
+use repository
+db.dropDatabase()
+db.users.insert({username:"miles.davis", firstname:"Miles", lastname:"DAVIS", password:"secret", mail:"miles.davis@jazz.net"})
+db.users.insert({username:"john.coltrane", firstname:"John", lastname:"COLTRANE", password:"secret", mail:"john.coltrane@jazz.net"})
+

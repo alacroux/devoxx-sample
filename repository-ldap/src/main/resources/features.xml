@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="devoxx-${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0">
+	
+    <feature name="fr.netapsys.devoxx.ldapService" version="${project.version}">
+        <configfile finalname="/etc/${project.artifactId}.cfg">mvn:${project.groupId}/${project.artifactId}/${project.version}/cfg</configfile>
+      	<bundle>mvn:com.unboundid/unboundid-ldapsdk/2.3.6</bundle>
+		<bundle>mvn:${project.groupId}/repository-api/1.0.0</bundle>
+      	<bundle>mvn:${project.groupId}/${project.artifactId}/${project.version}</bundle>
+    </feature>
+
+</features>

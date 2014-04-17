@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+	xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+
+	<cm:property-placeholder persistent-id="repository-mongo" update-strategy="reload">
+		<cm:default-properties>
+			<cm:property name="mongo.host" value="localhost"/>
+			<cm:property name="mongo.port" value="27017"/>
+			<cm:property name="mongo.database" value="repository"/>
+		</cm:default-properties>
+	</cm:property-placeholder>
+
+	<bean id="mongoService" class="fr.netapsys.devoxx.repository.mongo.support.MongoRepository">
+		<property name="host" value="${mongo.host}"/>
+		<property name="port" value="${mongo.port}"/>
+		<property name="database" value="${mongo.database}"/>
+	</bean>
+	
+	<service interface="fr.netapsys.devoxx.repository.Repository" ref="mongoService" />
+
+</blueprint>
